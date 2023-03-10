@@ -1,68 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora2</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
+
     <div class="container">
+
         <section class="row">
+
             <article class="col">
 
                 <div class="calculadora bg-dark">
-                    <input type="text" class="form-control form-control-lg text-end fs-2 px-2 mb-3" placeholder="0">
+                    <input id="resultado" type="text" class="form-control form-control-lg text-end fs-2 px-2 mb-3" placeholder="0">
+
+                    <div class="d-flex justify-content-between">
+                        <button onclick="calcular('acao', 'c')" type="button" class="btn btn-danger btn-lg fw-ligth clear">C</button>
+                        <button onclick="calcular('acao', '/')" type="button" class="btn btn-danger btn-lg fw-ligth">/</button>
+                        <button onclick="calcular('acao', '*')" type="button" class="btn btn-danger btn-lg fw-ligth">X</button>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button onclick="calcular('valor', 7)" type="button" class="btn btn-dark btn-lg fw-ligth">7</button>
+                        <button onclick="calcular('valor', 8)" type="button" class="btn btn-dark btn-lg fw-ligth">8</button>
+                        <button onclick="calcular('valor', 9)" type="button" class="btn btn-dark btn-lg fw-ligth">9</button>
+                        <button onclick="calcular('acao', '-')" type="button" class="btn btn-danger btn-lg fw-ligth">-</button>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button onclick="calcular('valor', 4)" type="button" class="btn btn-dark btn-lg fw-ligth">4</button>
+                        <button onclick="calcular('valor', 5)" type="button" class="btn btn-dark btn-lg fw-ligth">5</button>
+                        <button onclick="calcular('valor', 6)" type="button" class="btn btn-dark btn-lg fw-ligth">6</button>
+                        <button onclick="calcular('acao', '+')" type="button" class="btn btn-danger btn-lg fw-ligth">+</button>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button onclick="calcular('valor', 1)" type="button" class="btn btn-dark btn-lg fw-ligth">1</button>
+                        <button onclick="calcular('valor', 2)" type="button" class="btn btn-dark btn-lg fw-ligth">2</button>
+                        <button onclick="calcular('valor', 3)" type="button" class="btn btn-dark btn-lg fw-ligth">3</button>
+                        <button onclick="calcular('acao', '=')" type="button" class="btn btn-danger btn-lg fw-ligth">=</button>
+                    </div>
+
+                    <div class="d-flex justify-content-start">
+                        <button onclick="calcular('valor', 0)" type="button" class="btn btn-dark btn-lg fw-ligth">0</button>
+                        <button onclick="calcular('acao', '.')" type="button" class="btn btn-dark btn-lg fw-ligth">.</button>
+                    </div>
 
                 </div>
-
-                <div class="d-flex justify-content-between">
-                    <button type="button" class="btn btn-danger btn-lg fw-ligth clear">C</button>
-                    <button type="button" class="btn btn-danger btn-lg fw-ligth">/</button>
-                    <button type="button" class="btn btn-danger btn-lg fw-ligth">x</button>
-                    
-                </div>
-
-                <div class="d-flex justify-content-between">
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">7</button>
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">8</button>
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">9</button>
-                    <button type="button" class="btn btn-danger btn-lg fw-ligth">-</button>
-                    
-                </div>
-
-                <div class="d-flex justify-content-between">
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">4</button>
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">5</button>
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">6</button>
-                    <button type="button" class="btn btn-danger btn-lg fw-ligth">+</button>
-                    
-                </div>
-
-                <div class="d-flex justify-content-between">
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">1</button>
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">2</button>
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">3</button>
-                    <button type="button" class="btn btn-danger btn-lg fw-ligth enter" style="width: 106px;">=</button>
-                    
-                </div>
-
-                <div class="d-flex justify-content-start">
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth zero ">0</button>
-                    <button type="button" class="btn btn-dark btn-lg fw-ligth">.</button>
-                    
-                </div>
-
-
 
             </article>
+
         </section>
+
     </div>
 
-
-    <script src="./app.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
